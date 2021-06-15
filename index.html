@@ -7,64 +7,76 @@
           content="IE=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+    
     <title>Portfolio|Nicolas De Luca</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a>Home</a>
-            <a>Projects</a>
-            <a>About</a>
-            <a>Resume <i class="fa fa-download"></i></a>
-        </nav>
-    </header>
-    <section class="landing-page">
-        <h1>Nicolas De Luca</h1>
-        <h2>Full Stack Developer</h2>
-    </section>
-    <section class="projects flex-container">
-        <h3>My Work</h3>
-        <hr>
-        <div class="project-card">
-            <h4 class="title">Project 1</h4>
-            <img class="food-img" src="'+data[i].Image+'">
-            <div id="description" class="hidden-description">
-                <div class="card-header">
-                   <a href="">Code</a>
-                   <a href="">Live</a>
+    <div class="container">
+        <header>
+            <nav>
+                <a class="scroll" href="#top">Home</a>
+                <a class="scroll" href="#projects">Projects</a>
+                <a class="scroll" href="#about">About</a>
+                <a class="scroll" href="#contact">Contact</a>
+                <a>Resume <i class="fa fa-download"></i></a>
+            </nav>
+        </header>
+        <section class="landing" id="top">
+            <h1>Nicolas De Luca</h1>
+            <h2>Full Stack Developer</h2>
+        </section>
+        <section class="projects flex-container" id="projects">
+            <h3>My Work</h3>
+            <hr>
+            <div class="project-card">
+                <h4 class="title">Project 1</h4>
+                <img class="project-img" src="">
+                <div id="description" class="hidden-description">
+                    <div class="card-header">
+                       <a href="">Code</a>
+                       <a href="">Live</a>
+                    </div>
+                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
                 </div>
-                <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             </div>
-        </div>
-        <div class="project-card">
-            <h4 class="title">Project 2</h4>
-            <img class="food-img" src="'+data[i].Image+'">
-            <div id="description" class="hidden-description">
-                <div class="card-header">
-                   <a href="">Code</a>
-                   <a href="">Live</a>
+            <div class="project-card">
+                <h4 class="title">Project 2</h4>
+                <img class="food-img" src="">
+                <div id="description" class="hidden-description">
+                    <div class="card-header">
+                       <a href="">Code</a>
+                       <a href="">Live</a>
+                    </div>
+                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
                 </div>
-                <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             </div>
-        </div>
-        <div class="project-card">
-            <h4 class="title">Project 3</h4>
-            <img class="food-img" src="'+data[i].Image+'">
-            <div id="description" class="hidden-description">
-                <div class="card-header">
-                   <a href="">Code</a>
-                   <a href="">Live</a>
+            <div class="project-card">
+                <h4 class="title">Project 3</h4>
+                <img class="food-img" src="">
+                <div id="description" class="hidden-description">
+                    <div class="card-header">
+                       <a href="">Code</a>
+                       <a href="">Live</a>
+                    </div>
+                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
                 </div>
-                <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             </div>
-        </div>
-
-    </section>
-
-    <section class="about flex-container">
-        <h3>About</h3>
-    </section>
+    
+        </section>
+    
+        <section class="about" id="about">
+            <h3>About</h3>
+        </section>
+        
+        <section class="contact" id="contact">
+            <h3>Lets Connect </h3>
+        </section>
+        
+    </div>
     
 </body>
 
