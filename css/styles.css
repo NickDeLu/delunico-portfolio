@@ -2,7 +2,7 @@ html{
     background-color: #333;
 }
 nav{
-    height:50px;
+    height:100px;
     position: fixed;
     background-color:#333;
     width: 100%;
@@ -18,12 +18,12 @@ body{
     margin:0;
     padding:0;
     width: 100vw;
-    height: auto;
+    height: 100vh;
     min-height: 100%;
 }
 .container{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
@@ -34,18 +34,44 @@ button{
 section{
     display: flex;
     justify-self: center;
-    align-items: center;
-    height:calc(100vh);
+    min-height:calc(100vh - 100px);
+    width:100vw;
+    margin-top:400px;
     scroll-margin-top:100px;
-    margin-bottom:500px;
     scroll-snap-align: start;
     overflow:hidden;
 }
+hr{
+    width: 100vw;
+}
+footer{
+    margin-top:100px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    height:200px;
+    width:100vw;
+    scroll-snap-align: start;
+    background-color:black;
+    color: white;
+}
+/* projects */
+.project-card{
+    border-radius: 10px;
+    max-width: 400px;
+    height:320px;
+    box-shadow: -5px 5px 10px black;
+    margin:10px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+}
+
 .landing{
-    
     background-color: aqua;
 }
 .projects{
+    flex-wrap: wrap;
     background-color: antiquewhite;
 }
 .contact{
@@ -65,4 +91,8 @@ h2{
 h3{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
+}
+.title{
+    text-align: center;
+    width: 100%;
 }

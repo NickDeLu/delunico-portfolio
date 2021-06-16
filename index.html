@@ -8,7 +8,6 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
     
     <title>Portfolio|Nicolas De Luca</title>
@@ -18,22 +17,34 @@
     <div class="container">
         <header>
             <nav>
-                <a class="scroll" href="#top">Home</a>
-                <a class="scroll" href="#projects">Projects</a>
-                <a class="scroll" href="#about">About</a>
-                <a class="scroll" href="#contact">Contact</a>
+                <a class="scroll" id="landing">Home</a>
+                <a class="scroll" id="projects">Projects</a>
+                <a class="scroll" id="about">About</a>
+                <a class="scroll" id="contact">Contact</a>
                 <a>Resume <i class="fa fa-download"></i></a>
             </nav>
         </header>
+        <img src="https://firebasestorage.googleapis.com/v0/b/auth-dev-ff796.appspot.com/o/files%2FouGePWcAQZMqy6DjSGzlQyq2ZZq2%2Fsorting%20algorithms%20visualised.gif?alt=media&token=37c1530c-f7d1-4bf1-8a61-f6a67a2e05cd">
         <section class="landing" id="top">
             <h1>Nicolas De Luca</h1>
             <h2>Full Stack Developer</h2>
         </section>
-        <section class="projects flex-container" id="projects">
-            <h3>My Work</h3>
+        <section class="projects" id="projects">
+            <h3 class="title">My Work</h3>
             <hr>
             <div class="project-card">
-                <h4 class="title">Project 1</h4>
+                <h4 class="title">Concierge Kart</h4>
+                <img class="food-img" src="">
+                <div id="description" class="hidden-description">
+                    <div class="card-header">
+                       <a href="">Code</a>
+                       <a href="">Live</a>
+                    </div>
+                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <h4 class="title">Task Manager</h4>
                 <img class="project-img" src="">
                 <div id="description" class="hidden-description">
                     <div class="card-header">
@@ -44,7 +55,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <h4 class="title">Project 2</h4>
+                <h4 class="title">World Money Pay</h4>
                 <img class="food-img" src="">
                 <div id="description" class="hidden-description">
                     <div class="card-header">
@@ -55,7 +66,18 @@
                 </div>
             </div>
             <div class="project-card">
-                <h4 class="title">Project 3</h4>
+                <h4 class="title">eLibrary</h4>
+                <img class="project-img" src="">
+                <div id="description" class="hidden-description">
+                    <div class="card-header">
+                       <a href="">Code</a>
+                       <a href="">Live</a>
+                    </div>
+                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <h4 class="title">Sorting Algorithms</h4>
                 <img class="food-img" src="">
                 <div id="description" class="hidden-description">
                     <div class="card-header">
@@ -65,6 +87,18 @@
                     <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
                 </div>
             </div>
+            <div class="project-card">
+                <h4 class="title">Restaurant</h4>
+                <img class="food-img" src="">
+                <div id="description" class="hidden-description">
+                    <div class="card-header">
+                       <a href="">Code</a>
+                       <a href="">Live</a>
+                    </div>
+                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+                </div>
+            </div>
+            
     
         </section>
     
@@ -75,6 +109,10 @@
         <section class="contact" id="contact">
             <h3>Lets Connect </h3>
         </section>
+
+        <footer>
+            <h3>@copyright Nick De Luca</h3>
+        </footer>
         
     </div>
     
