@@ -8,7 +8,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
+    
     
     <title>Portfolio|Nicolas De Luca</title>
 </head>
@@ -16,22 +18,50 @@
 <body>
     <div class="container">
         <header>
-            <nav>
-                <a class="scroll" id="landing">Home</a>
-                <a class="scroll" id="projects">Projects</a>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <nav class="topnav" id="myTopnav">
+                <a class="scroll" class="active" id="landing">Home</a>
+                <a class="scroll" id="projects">My Work</a>
                 <a class="scroll" id="about">About</a>
                 <a class="scroll" id="contact">Contact</a>
-                <a>Resume <i class="fa fa-download"></i></a>
+                <a href="https://firebasestorage.googleapis.com/v0/b/auth-dev-ff796.appspot.com/o/files%2FouGePWcAQZMqy6DjSGzlQyq2ZZq2%2FCurrent%20Resume.docx?alt=media&token=b2935a06-6124-4f45-a5c5-dc6e9ff42b2e">Resume <i class="fa fa-download"></i></a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </nav>
         </header>
-        <img src="https://firebasestorage.googleapis.com/v0/b/auth-dev-ff796.appspot.com/o/files%2FouGePWcAQZMqy6DjSGzlQyq2ZZq2%2Fsorting%20algorithms%20visualised.gif?alt=media&token=37c1530c-f7d1-4bf1-8a61-f6a67a2e05cd">
+        
+        
         <section class="landing" id="top">
-            <h1>Nicolas De Luca</h1>
-            <h2>Full Stack Developer</h2>
+            <div class="htmldiv"></div>
+            <div id="particles-js">
+
+                <div class="center-container" >
+                    <div id="title">
+                        <h1 id="title">Nicolas <i style="white-space: nowrap;">De Luca</i></h1>
+                        <h2 id="title">Full Stack Developer</h2>
+                    </div>
+                    <div class="scroll cta" id="cta">Lets Connect</div>
+                </div>
+            </div>
+            
+        </section>
+
+        <script type="text/javascript" src="/js/particles.js"></script>
+        <script type="text/javascript" src="/js/app.js"></script>
+
+        <div id="plug-place"></div>
+        <section id="plug">
+            <div class="show-plug">
+                <img class ="male" id ="male" src="img/male1.png">
+                <img class ="female" id="female" src="img/female1.png">
+                <img class ="maleglow" id ="maleglow" src="img/maleglow.png">
+                <img class ="femaleglow" id="femaleglow" src="img/femaleglow.png">
+            </div>
         </section>
         <section class="projects" id="projects">
             <h3 class="title">My Work</h3>
-            <hr>
             <div class="project-card">
                 <h4 class="title">Concierge Kart</h4>
                 <img class="food-img" src="">
@@ -54,7 +84,7 @@
                     <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
                 </div>
             </div>
-            <div class="project-card">
+            <!-- <div class="project-card">
                 <h4 class="title">World Money Pay</h4>
                 <img class="food-img" src="">
                 <div id="description" class="hidden-description">
@@ -97,7 +127,7 @@
                     </div>
                     <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
                 </div>
-            </div>
+            </div> -->
             
     
         </section>
