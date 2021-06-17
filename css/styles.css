@@ -4,13 +4,15 @@ html{
 nav{
     position: fixed;
     top: 0;
-    min-height:75px;
+    min-height:65px;
     background-color:#333;
     width: 100%;
     z-index: 2;
     transition:0.6s all;
+    font-family:Roboto,sans-serif;
 }
 nav a{
+    font-family:Roboto,sans-serif;
     cursor: pointer;
     padding:10px;
     margin: 10px;
@@ -30,7 +32,7 @@ body{
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    scroll-behavior: smooth;.
+    scroll-behavior: smooth;
 }
 button{
     outline:none;
@@ -45,7 +47,7 @@ section{
     min-height:calc(100vh - 100px);
     width:100vw;
     margin-top:600px;
-    scroll-margin-top:75px;
+    scroll-margin-top:65px;
     scroll-snap-align: start;
     overflow:hidden;
     position: relative;
@@ -102,11 +104,18 @@ h3{
     font-size: 30px;
 }
 .title{
-    text-align: center;
-    width: 100%;
-    color:#cc4d6d;
-
+    font-size: 60px;
 }
+.subtitle{
+    font-size: 30px;
+}
+.title,.subtitle{
+    background-color: #861657;
+    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 #particles-js{
     height:100%;
     background-color:#222;
@@ -162,6 +171,9 @@ canvas{
 
 .topnav .icon {
     display: none;
+    font-size: 30px;
+    padding:5px;
+    padding-right:8px;
 }
 
 @media screen and (max-width: 600px) {
@@ -171,7 +183,7 @@ canvas{
       display: block;
     }
     .topnav{
-        height:75px;
+        height:65px;
     }
     .topnav.responsive a.icon {
         position: absolute;
@@ -186,17 +198,20 @@ canvas{
     .topnav.responsive{
         height:310px;
     }
+    .center-container{
+        margin-top: 0px!important;
+    }
   }
   .center-container{
       position: absolute;
-      margin: 50px auto;
+      margin: 150px auto;
       color:#cc4d6d;
       padding:20px;
       text-align:center;
       width: calc(100% - 40px);
   }
   .cta{
-      background-color:#cc4d6d;
+      background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
       color:white;
       border-radius:25px;
       padding:20px;
