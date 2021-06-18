@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     
     <title>Portfolio|Nicolas De Luca</title>
 </head>
@@ -21,22 +22,25 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
             <nav class="topnav" id="myTopnav">
-                <a class="scroll" class="active" id="landing">Home</a>
-                <a class="scroll" id="projects">My Work</a>
-                <a class="scroll" id="about">About</a>
-                <a class="scroll" id="contact">Contact</a>
-                <a href="https://firebasestorage.googleapis.com/v0/b/auth-dev-ff796.appspot.com/o/files%2FouGePWcAQZMqy6DjSGzlQyq2ZZq2%2FCurrent%20Resume.docx?alt=media&token=b2935a06-6124-4f45-a5c5-dc6e9ff42b2e">Resume <i class="fa fa-download"></i></a>
+                <img id="logo" class ="logo" src="img/Logo.PNG">
+                <div class='nav-container'>
+                    <a class="scroll" id="landing">Home</a>
+                    <a class="scroll" id="projects">My Work</a>
+                    <a class="scroll" id="about">About</a>
+                    <a class="scroll" id="contact">Contact</a>
+                    <a href="https://firebasestorage.googleapis.com/v0/b/auth-dev-ff796.appspot.com/o/files%2FouGePWcAQZMqy6DjSGzlQyq2ZZq2%2FCurrent%20Resume.docx?alt=media&token=b2935a06-6124-4f45-a5c5-dc6e9ff42b2e">Resume <i class="fa fa-download"></i></a>
+                </div>
                 <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
                     <i class="fa fa-bars"></i>
                 </a>
+                
             </nav>
         </header>
         
         
         <section class="landing" id="top">
-            <div class="htmldiv"></div>
             <div id="particles-js">
-
+                <img class="landing-bg" src="/img/background.jpg">
                 <div class="center-container" >
                     <div id="title">
                         <h1 class="title">Nicolas <i style="white-space: nowrap;">De Luca</i></h1>
@@ -61,83 +65,123 @@
             </div>
         </section>
         <section class="projects" id="projects">
+            <div class="htmldiv"></div>
+
             <h3 class="title">My Work</h3>
-            <div class="project-card">
-                <h4 class="title">Concierge Kart</h4>
-                <img class="food-img" src="">
-                <div id="description" class="hidden-description">
-                    <div class="card-header">
-                       <a href="">Code</a>
-                       <a href="">Live</a>
+            <div class="project-container">
+                <div class="project-card">
+                    <h4 class="subtitle">Concierge Kart</h4>
+                    <img class="project-img" src="/img/conciergeKart.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/conciergekart"> Code</a>
+                           <a class ="link fa fa-eye" target="_blank" href="https://www.concierge-kart.com/"> Live</a>
+                        </div>
+                        <p>This project was freelanced for a small canadian alcohol delivery company that wanted to expand their business online. To create their vision, they required a persistent shopping cart order system where drivers are notified when orders arrive and customers are notified when a driver selects their order. </p>
+                        <div class="card-footer">
+                            <div class="skill">Spring Boot</div>
+                            <div class="skill">Shopping Cart</div>
+                            <div class="skill">PostgreSQL</div>
+                            
+                        </div>
                     </div>
-                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
                 </div>
+                <div class="project-card">
+                    <h4 class="subtitle">Task Manager</h4>
+                    <img class="project-img" src="/img/taskmanager.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-taskmanager"> Code</a>
+                           <a class ="link fa fa-eye" target="_blank" href="http://delunico-taskmanager.herokuapp.com/"> Live</a>
+                        </div>
+                        <p>This task managing web application uses full CRUD operations between the front-end build in Angular and the backend using a node.js API connected to a MySQL database. It offers easy task management as well as the option to save multiple lists.</p>
+                        <div class="card-footer">
+                            <div class="skill">Angular</div>
+                            <div class="skill">Node API</div>
+                            <div class="skill">Material UI</div>
+                            <div class="skill">SQL</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h4 class="subtitle">World Money Pay</h4>
+                    <img class="project-img" src="/img/wmp.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                           
+                        </div>
+                        <p>This project was done over my 4 month co-op as a Angular and Node.js developer at WorldMoneyPay Inc. I led a team of three in implementing over 60 wireframes of a new website design overhaul. I also contributed to better protecting the integrity and security of user balance data.  </p>
+                        <div class="card-footer">
+                            <div class="skill">Angular</div>
+                            <div class="skill">Node API</div>
+                            <div class="skill">Material UI</div>
+                            <div class="skill">SQL</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h4 class="subtitle">eLibrary</h4>
+                    <img class="project-img" src="/img/library.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-library"> Code</a>
+                           <a class ="link fa fa-eye" target="_blank" href="https://delunico-library.herokuapp.com/"> Live</a>
+                        </div>
+                        <p>This ebooks was designed to display information about different kinds of ebooks in a dynamic, responsive, and intuitive interface. It implements spring boot web framework, spring security, spring mail, thymeleaf, and postgresql.</p>
+                        <div class="card-footer">
+                            <div class="skill">Spring Boot</div>
+                            <div class="skill">Thymeleaf</div>
+                            <div class="skill">Spring Mail</div>
+                            <div class="skill">SQL</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h4 class="subtitle">Sorting Algorithms</h4>
+                    <img class="project-img" src="/img/sortingalgorithms.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-taskmanager"> Code</a>
+                        </div>
+                        <p>This Pygame app visualizes bubble sort and quick sort sorting algorithms with customized UI components.  I developed my own custom UI components such as sliders and toggle buttons as they are not so easy to integrate from other modules such as Tkinter into Pygame seamlessly.</p>
+                        <div class="card-footer">
+                            <div class="skill">Python</div>
+                            <div class="skill">Pygame</div>
+                            <div class="skill">Bubble Sort</div>
+                            <div class="skill">Quick Sort</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h4 class="subtitle">Restaurant</h4>
+                    <img class="project-img" src="/img/restaurant.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/restaurant"> Code</a>
+                           <a class ="link fa fa-eye" target="_blank" href="http://delunico.dev.fast.sheridanc.on.ca/restaurant/index.html"> Live</a>
+                        </div>
+                        <p>This CRUD restaurant order system was designed to be an example of what can be achieved with just plain HTML, CSS, JS, and a localStorage shopping cart. It utilizes jQuery for dynamically updating data fetched from a json file with ajax.  </p>
+                        <div class="card-footer">
+                            <div class="skill">jQuery</div>
+                            <div class="skill">Ajax</div>
+                            <div class="skill">CSS6</div>
+                            <div class="skill">HTML5</div>
+                            <div class="skill">ES6</div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <div class="project-card">
-                <h4 class="title">Task Manager</h4>
-                <img class="project-img" src="">
-                <div id="description" class="hidden-description">
-                    <div class="card-header">
-                       <a href="">Code</a>
-                       <a href="">Live</a>
-                    </div>
-                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-                </div>
-            </div>
-            <!-- <div class="project-card">
-                <h4 class="title">World Money Pay</h4>
-                <img class="food-img" src="">
-                <div id="description" class="hidden-description">
-                    <div class="card-header">
-                       <a href="">Code</a>
-                       <a href="">Live</a>
-                    </div>
-                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <h4 class="title">eLibrary</h4>
-                <img class="project-img" src="">
-                <div id="description" class="hidden-description">
-                    <div class="card-header">
-                       <a href="">Code</a>
-                       <a href="">Live</a>
-                    </div>
-                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <h4 class="title">Sorting Algorithms</h4>
-                <img class="food-img" src="">
-                <div id="description" class="hidden-description">
-                    <div class="card-header">
-                       <a href="">Code</a>
-                       <a href="">Live</a>
-                    </div>
-                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <h4 class="title">Restaurant</h4>
-                <img class="food-img" src="">
-                <div id="description" class="hidden-description">
-                    <div class="card-header">
-                       <a href="">Code</a>
-                       <a href="">Live</a>
-                    </div>
-                    <p>This project is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-                </div>
-            </div> -->
             
     
         </section>
     
         <section class="about" id="about">
-            <h3>About</h3>
+            <h3 class="title">About</h3>
         </section>
         
         <section class="contact" id="contact">
-            <h3>Lets Connect </h3>
+            <h3 class="title">Lets Connect </h3>
         </section>
 
         <footer>

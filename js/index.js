@@ -20,7 +20,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var scrollLink = scrollLinks[i];
     if(scrollLink.classList.contains("cta")){
       $(".cta").on("click",()=>{
-        console.log(plug);
         $("#plug-place").after(plug);
         setTimeout( function (){ 
             document.querySelector(".show-plug").scrollIntoView({ 
@@ -53,6 +52,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         navbar.classList.remove("responsive");
       })
     }
+    $("#logo").on('click',function(){
+      document.querySelector(".landing").scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    });
     scrollLink.addEventListener('click',function(e){
         document.querySelector("."+e.target.id).scrollIntoView({ 
           behavior: 'smooth' 
