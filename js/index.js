@@ -9,7 +9,29 @@ function toggleNav() {
 }
 
 
+
+
 window.addEventListener('DOMContentLoaded', (event) => {
+
+  var hasFired = false;
+  $(".container").on('scroll', function() {
+    
+    if (document.getElementsByClassName("container")[0].scrollTop >= 1000 && !hasFired) {
+        hasFired = true;
+        $("#myTopnav").addClass("scroll-nav");
+        // do something when scrolling down
+    }
+  
+    if (document.getElementsByClassName("container")[0].scrollTop < 1000 && hasFired) {
+        hasFired = false;
+        console.log("ey")
+        $("#myTopnav").removeClass("scroll-nav");
+        // do something when scrolling up, and enable the scroll-down event to fire once again
+    }
+
+  });
+
+
   $("#maleglow").fadeOut();
   $("#femaleglow").fadeOut();
   var plug = $("#plug").detach();

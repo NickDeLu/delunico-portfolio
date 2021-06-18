@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="container" class="container">
         <header>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -37,7 +37,18 @@
             </nav>
         </header>
         
-        
+        <div class="socialbar">
+            <a target="_blank" class="github" href="https://github.com/NickDeLu">
+                <i class="fa fa-square fa-stack-1x outside"></i>
+                <i class="fa fa-github-square fa-stack-1x inside"></i>
+            </a>
+            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/nickdelu/">
+                <i class="fa fa-square fa-stack-1x outside"></i>
+                <i class="fa fa-linkedin-square fa-stack-1x inside"></i>
+            </a>
+
+                
+        </div>
         <section class="landing" id="top">
             <div id="particles-js">
                 <img class="landing-bg" src="/img/background.jpg">
@@ -65,7 +76,6 @@
             </div>
         </section>
         <section class="projects" id="projects">
-            <div class="htmldiv"></div>
 
             <h3 class="title">My Work</h3>
             <div class="project-container">
@@ -178,15 +188,36 @@
     
         <section class="about" id="about">
             <h3 class="title">About</h3>
+            <div class="aboutme">
+                <div class="div">&lt;dev&gt;</div>
+                    <div class="indent">
+                        <div class="div">&lt;name&gt; <i style="color:white;">Nick De Luca</i> &lt;/name&gt;</div><br>
+                        <div class="div">&lt;edu&gt; <i style="color:white;">Sheridan College</i> &lt;/edu&gt;</div><br>
+                        <div class="div">&lt;intro&gt;</div>
+                        <div class="div indent"><p><div style="color:white;">Hi! My name is Nick. I'm a full stack developer and I am the type of programmer that is addicted to those "ahaaa" moments when you click run and it works!</div></p></div>
+                        <p class="div">&lt;intro&gt;</p>
+                    </div>
+                   
+                <div class="div">&lt;/dev&gt;</div>
+            </div>
+            
+            
         </section>
         
         <section class="contact" id="contact">
             <h3 class="title">Lets Connect </h3>
+            <form class="form">
+                <input type="text" placeholder ="Enter Name" required>
+                <input type="email" placeholder ="Enter email" required>
+                <textarea placeholder ="Enter Message"></textarea required>
+                <input type="submit" value="Connect">
+            </form>
+           
         </section>
 
-        <footer>
+        <!-- <footer>
             <h3>@copyright Nick De Luca</h3>
-        </footer>
+        </footer> -->
         
     </div>
     

@@ -40,7 +40,7 @@ button{
     border:none;
 }
 section:first-of-type{
-    margin-top: 100px;
+    margin-top: 0px;
 }
 section{
     min-height:calc(100vh - 100px);
@@ -50,9 +50,6 @@ section{
     scroll-snap-align: start;
     overflow:hidden;
     position: relative;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
 }
 hr{
     width: 100vw;
@@ -95,8 +92,42 @@ footer{
     height:100%;
     object-fit: cover;
 }
+.socialbar{
+    width:50px;
+    height:135px;
+    font-size: 40px;
+    position: absolute;
+    top:60%;
+    left:0;
+    z-index: 2;
+    cursor: pointer;
+}
 .card-header{
     text-align: center;
+}
+.github .inside{
+    font-size: 70px;
+    color:black;
+}
+.linkedin .inside {
+    font-size: 70px;
+    color: #1B3764;
+}
+.linkedin .fa-stack-1x{
+    bottom:0;
+}
+.socialbar a .outside {
+    font-size: 70px;
+    color: white;  
+}
+.socialbar a:hover .inside {
+    color: white;
+}
+.linkedin:hover .outside {
+    color: #1B3764;
+}
+.github:hover .outside {
+    color: black;
 }
 
 .link,.skill{
@@ -120,7 +151,7 @@ footer{
     background: rgb(44,49,58);
     background: linear-gradient(107deg, rgb(40, 46, 58) 0%, rgb(80, 90, 105) 100%);
 }
-.link:hover,.cta:hover{
+.link:hover,.cta:hover,.form input[type="submit"]:hover{
     background-color:white;
     color:#00c9b7;
     text-shadow: none;
@@ -171,6 +202,8 @@ h3{
 }
 
 #particles-js{
+    display: flex;
+    align-items: center;
     height:100%;
     width: 100%;
     /* background: linear-gradient(107deg, rgb(40, 46, 58) 0%, rgb(80, 90, 105) 100%); */
@@ -187,6 +220,10 @@ canvas{
 .nav-container{
     float:right;
     margin-right:20px;
+}
+.scroll-nav{
+    background:linear-gradient(107deg, rgb(40, 46, 58) 0%, rgb(80, 90, 105) 100%);
+    box-shadow:1px 1px 9px black;
 }
 .topnav a {
     float: left;
@@ -289,13 +326,13 @@ canvas{
   }
   .center-container{
       position: absolute;
-      margin: 150px auto;
+      margin: auto auto;
       color:#cc4d6d;
       padding:20px;
       text-align:center;
       width: calc(100% - 40px);
   }
-  .cta{
+  .cta,.form input[type="submit"]{
     text-shadow: -1px 1px 5px black;
       background-color:#00c9b7;
       color:white;
@@ -339,16 +376,34 @@ canvas{
   #plug{
     display: flex;
   }
-  .htmldiv{
-      color:white;
-      font-size:30px;
-      position: absolute;
-      top:90px;
-      left:20px;
-      font-family: 'Courier New', Courier, monospace;
+  .aboutme{
+      text-align: left;
+      margin:80px auto;
+      width:fit-content;
+      height:500px;
+      width:850px;
+      position: relative;
   }
-  .htmldiv:after{
-    content:"</dev>";
+  .div{
+    font-size:30px;
+    color:#569cd6;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .indent{
+      margin-left:100px;
+  }
+  @media(max-width:890px){
+      .div{
+          font-size:20px;
+      }
+      .indent{
+        margin-left:40px;
+      }
+      .aboutme{
+          width:100%;
+          max-width: 500px;
+      }
+      
   }
 
   .hidden-description{
@@ -378,4 +433,46 @@ canvas{
     background: linear-gradient(375deg,rgba(146, 175, 190, 0.8)0% ,rgba(65, 107, 129, 0.8) 50%,rgba(53, 82, 98, 1) 100%);
     padding-top:0px;
     cursor:pointer;
+}
+
+.form{
+    width:fit-content;
+    margin:100px auto;
+    max-width: 800px;
+    text-align: center;
+}
+.form input{
+    width:calc(100% - 50px);
+    margin:20px auto;
+    padding:20px;
+    max-width: 600px;
+    outline:none;
+    color: white;
+    background-color:transparent;
+    border:2px solid rgb(80, 90, 105);
+    border-radius:10px;
+}
+.form input:focus,.form textarea:focus{
+    border:1px solid white;
+}
+.form input[type="submit"]{
+    margin:0;
+    width: 100%;
+    max-width: 200px;
+    font-size: 20px;
+}
+.form ::placeholder{
+    color:#ccc;
+}
+.form textarea{
+    background-color:transparent;
+    border:2px solid rgb(80, 90, 105);
+    border-radius:10px;
+    padding:20px;
+    width:calc(100% - 50px);
+    margin:20px auto;
+    max-width: 600px;
+    resize:none;
+    height:100px;
+    outline:none;
 }
