@@ -8,10 +8,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>Portfolio|Nicolas De Luca</title>
 </head>
@@ -19,7 +18,7 @@
 <body>
     <div id="container" class="container">
         <header>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            
 
             <nav class="topnav" id="myTopnav">
                 <img id="logo" class ="logo" src="img/Logo.PNG">
@@ -69,10 +68,10 @@
         <div id="plug-place"></div>
         <section id="plug">
             <div class="show-plug">
-                <img class ="male" id ="male" src="img/male1.png">
-                <img class ="female" id="female" src="img/female1.png">
-                <img class ="maleglow" id ="maleglow" src="img/maleglow.png">
-                <img class ="femaleglow" id="femaleglow" src="img/femaleglow.png">
+                <img loading="lazy" class ="male" id ="male" src="img/male1.png">
+                <img loading="lazy" class ="female" id="female" src="img/female1.png">
+                <img loading="lazy" class ="maleglow" id ="maleglow" src="img/maleglow.png">
+                <img loading="lazy" class ="femaleglow" id="femaleglow" src="img/femaleglow.png">
             </div>
         </section>
         <section class="projects" id="projects">
@@ -81,7 +80,7 @@
             <div class="project-container">
                 <div class="project-card">
                     <h4 class="subtitle">Concierge Kart</h4>
-                    <img class="project-img" src="/img/conciergeKart.gif">
+                    <img loading="lazy" class="project-img" src="/img/conciergeKart.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
                            <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/conciergekart"> Code</a>
@@ -98,7 +97,7 @@
                 </div>
                 <div class="project-card">
                     <h4 class="subtitle">Task Manager</h4>
-                    <img class="project-img" src="/img/taskmanager.gif">
+                    <img loading="lazy" class="project-img" src="/img/taskmanager.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
                            <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-taskmanager"> Code</a>
@@ -115,7 +114,7 @@
                 </div>
                 <div class="project-card">
                     <h4 class="subtitle">World Money Pay</h4>
-                    <img class="project-img" src="/img/wmp.gif">
+                    <img loading="lazy" class="project-img" src="/img/wmp.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
                            
@@ -131,7 +130,7 @@
                 </div>
                 <div class="project-card">
                     <h4 class="subtitle">eLibrary</h4>
-                    <img class="project-img" src="/img/library.gif">
+                    <img loading="lazy" class="project-img" src="/img/library.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
                            <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-library"> Code</a>
@@ -148,7 +147,7 @@
                 </div>
                 <div class="project-card">
                     <h4 class="subtitle">Sorting Algorithms</h4>
-                    <img class="project-img" src="/img/sortingalgorithms.gif">
+                    <img loading="lazy" class="project-img" src="/img/sortingalgorithms.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
                            <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-taskmanager"> Code</a>
@@ -164,7 +163,7 @@
                 </div>
                 <div class="project-card">
                     <h4 class="subtitle">Restaurant</h4>
-                    <img class="project-img" src="/img/restaurant.gif">
+                    <img loading="lazy" class="project-img" src="/img/restaurant.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
                            <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/restaurant"> Code</a>
@@ -222,5 +221,6 @@
     </div>
     
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
 </html>
