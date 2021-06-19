@@ -205,10 +205,10 @@
         
         <section class="contact" id="contact">
             <h3 class="title">Lets Connect </h3>
-            <form class="form" action="form.php" method="POST" enctype="form-data">
-                <input type="text" name="name" placeholder ="Enter Name" required>
-                <input type="email" name="from" placeholder ="Enter email" required>
-                <textarea type="textfield" name="msg" placeholder ="Enter Message"></textarea required>
+            <form class="form" action="https://formspree.io/f/xnqlvlep" method="POST">
+                <input type="email" name="_replyto" placeholder ="Enter email" required>
+                <textarea type="textfield" name="message" placeholder ="Enter Message"></textarea required>
+                <input type="hidden" name="_subject" value="New submission!" />
                 <input type="submit" value="Connect">
             </form>
         </section>
