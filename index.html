@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <title>Portfolio|Nicolas De Luca</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>Portfolio | Nicolas De Luca</title>
 </head>
 
 <body>
@@ -25,6 +25,7 @@
                 <div class='nav-container'>
                     <a class="scroll" id="landing">Home</a>
                     <a class="scroll" id="projects">My Work</a>
+                    <a class="scroll" id="experience">Experience</a>
                     <a class="scroll" id="about">About</a>
                     <a class="scroll" id="contact">Contact</a>
                     <a href="https://firebasestorage.googleapis.com/v0/b/auth-dev-ff796.appspot.com/o/files%2FouGePWcAQZMqy6DjSGzlQyq2ZZq2%2FNicolas_DeLuca_resume.docx?alt=media&token=9d5609fc-2753-48ff-a78a-11e926d998b7">Resume <i class="fa fa-download"></i></a>
@@ -53,8 +54,8 @@
                 <img class="landing-bg" src="/img/background.jpg">
                 <div class="center-container" >
                     <div id="title">
-                        <h1 class="title">Nicolas <i style="white-space: nowrap;">De Luca</i></h1>
-                        <h2 class="subtitle">Full Stack Developer</h2>
+                        <h1 class="title">Nicolas <span style="white-space: nowrap;">De Luca</span></h1>
+                        <h2 class="subtitle" style="box-shadow:unset;">Full Stack Developer</h2>
                     </div>
                     <div class="scroll cta" id="cta">Lets Connect</div>
                 </div>
@@ -113,18 +114,18 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <h4 class="subtitle">World Money Pay</h4>
-                    <img loading="lazy" class="project-img" src="/img/wmp.gif">
+                    <h4 class="subtitle">Delunico Drive</h4>
+                    <img loading="lazy" class="project-img" style="height:unset!important;" src="/img/delunicodrive.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
-                           
+                            <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-google-drive-clone"> Code</a>
+                            <a class ="link fa fa-eye" target="_blank" href="https://delunico-google-drive-clone.herokuapp.com/"> Live</a> 
                         </div>
-                        <p>This project was done over my 4 month co-op as a Angular and Node.js developer at WorldMoneyPay Inc. I led a team of three in implementing over 60 wireframes of a new website design overhaul. I also contributed to better protecting the integrity and security of user balance data.  </p>
+                        <p>A React.js web app that implements file storage from the google firebase API with user authentication. File directories can store uploaded files saved to your account and can later be downloaded.</p>
                         <div class="card-footer">
-                            <div class="skill">Angular</div>
+                            <div class="skill">React</div>
                             <div class="skill">Node API</div>
-                            <div class="skill">Material UI</div>
-                            <div class="skill">SQL</div>
+                            <div class="skill">Firebase Auth & DB</div>
                         </div>
                     </div>
                 </div>
@@ -136,7 +137,7 @@
                            <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-library"> Code</a>
                            <a class ="link fa fa-eye" target="_blank" href="https://delunico-library.herokuapp.com/"> Live</a>
                         </div>
-                        <p>This ebooks was designed to display information about different kinds of ebooks in a dynamic, responsive, and intuitive interface. It implements spring boot web framework, spring security, spring mail, thymeleaf, and postgresql.</p>
+                        <p>This ebooks application was designed to display information about different kinds of ebooks in a dynamic, responsive, and intuitive interface. It implements spring boot web framework, spring security, spring mail, thymeleaf, and postgresql.</p>
                         <div class="card-footer">
                             <div class="skill">Spring Boot</div>
                             <div class="skill">Thymeleaf</div>
@@ -150,7 +151,7 @@
                     <img loading="lazy" class="project-img" src="/img/sortingalgorithms.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
-                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-taskmanager"> Code</a>
+                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/SortingAlgorithms"> Code</a>
                         </div>
                         <p>This Pygame app visualizes bubble sort and quick sort sorting algorithms with customized UI components.  I developed my own custom UI components such as sliders and toggle buttons as they are not so easy to integrate from other modules such as Tkinter into Pygame seamlessly.</p>
                         <div class="card-footer">
@@ -184,7 +185,47 @@
             
     
         </section>
-    
+
+        <section class="experience" id="experience">
+            <h3 class="title">Experience</h3>
+            <div class="workexperience">
+                <div class="div">&lt;co-ops&gt;</div>
+                    <div class="indent">
+                        <div class="div">&lt;blackberry&gt;</div>
+                            <div class="div indent">
+                                <div style="color:white;">
+                                    <div class="div">&lt;title&gt; <i style="color:white;">Reporting Automation Developer</i> &lt;/title&gt;</div>
+                                    <div class="div">&lt;date&gt; <i style="color:white;">Sep 2021 - Dec 2021</i> &lt;/date&gt;</div>
+                                    <div class="div">&lt;summary&gt;</div>
+                                    <div class="div indent">
+                                        <div style="color:white;">Develop and architect full-stack internal web tools used to automate change and process management workflows.</div>
+                                    </div>
+                                    <div class="div">&lt;/summary&gt;</div>
+                                </div>
+                            </div>
+                        <div class="div">&lt;/blackberry&gt;</div>
+                        <br>
+                        <div class="div">&lt;worldmoneypay&gt;</div>
+                            <div class="div indent">
+                                <div style="color:white;">
+                                    <div class="div">&lt;title&gt; <i style="color:white;">Angular and Node.js Developer</i> &lt;/title&gt;</div> 
+                                    <div class="div">&lt;date&gt; <i style="color:white;">Feb 2021 - May 2021</i> &lt;/date&gt;</div>
+                                    <div class="div">&lt;summary&gt;</div>
+                                    <div class="div indent">
+                                        <div style="color:white;">Implement a new user interface based on designs, and lead a small team of students for front-end development.</div>
+                                    </div>
+                                    <div class="div">&lt;/summary&gt;</div>
+                                </div>
+                            </div>
+                        <div class="div">&lt;/worldmoneypay&gt;</div>
+                    </div>
+                   
+                <div class="div">&lt;/co-ops&gt;</div>
+            </div>
+            
+            
+        </section>
+
         <section class="about" id="about">
             <h3 class="title">About</h3>
             <div class="aboutme">
@@ -193,8 +234,8 @@
                         <div class="div">&lt;name&gt; <i style="color:white;">Nick De Luca</i> &lt;/name&gt;</div><br>
                         <div class="div">&lt;edu&gt; <i style="color:white;">Sheridan College</i> &lt;/edu&gt;</div><br>
                         <div class="div">&lt;intro&gt;</div>
-                        <div class="div indent"><p><div style="color:white;">Hi! My name is Nick. I'm a full stack developer and I am the type of programmer that is addicted to those "ahaaa" moments when you click run and it works!</div></p></div>
-                        <p class="div">&lt;intro&gt;</p>
+                        <div class="div indent"><div style="color:white;">Hi! My name is Nick. I'm a full stack developer and I am the type of programmer that is addicted to those "ahaaa" moments when you click run and it works!</div></div>
+                        <div class="div">&lt;/intro&gt;</div>
                     </div>
                    
                 <div class="div">&lt;/dev&gt;</div>
@@ -207,7 +248,7 @@
             <h3 class="title">Lets Connect </h3>
             <form class="form" action="https://formspree.io/f/xnqlvlep" method="POST">
                 <input type="email" name="_replyto" placeholder ="Enter email" required>
-                <textarea type="textfield" name="message" placeholder ="Enter Message"></textarea required>
+                <textarea type="textfield" name="message" placeholder ="Enter Message" required></textarea>
                 <input type="hidden" name="_subject" value="New submission!" />
                 <input type="submit" value="Connect">
             </form>
