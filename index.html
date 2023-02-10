@@ -20,10 +20,20 @@
     <title>Portfolio | Nicolas De Luca</title>
 </head>
 
+<script>
+    window.addEventListener('unload', function() {
+  sessionStorage.setItem('scrollTop', window.pageYOffset);
+});
+
+// Retrieve and set the last scroll position on the current page
+window.addEventListener('load', function() {
+  window.scrollTo(0, sessionStorage.getItem('scrollTop') || 0);
+});
+</script>
+
 <body>
     <div id="container" class="container">
         <header>
-            
 
             <nav class="topnav" id="myTopnav">
                 <img id="logo" class ="logo" src="img/Logo.PNG">
@@ -51,8 +61,6 @@
                 <i class="fa fa-square fa-stack-1x outside"></i>
                 <i class="fa fa-linkedin-square fa-stack-1x inside"></i>
             </a>
-
-                
         </div>
         <section class="landing" id="top">
             <div id="particles-js">
@@ -84,63 +92,18 @@
 
             <h3 class="title">My Work</h3>
             <div class="project-container">
+
+                
                 <div class="project-card">
-                    <h4 class="subtitle">Concierge Kart</h4>
-                    <img loading="lazy" class="project-img" src="/img/conciergeKart.gif">
+                    
+                    <img loading="lazy" class="project-img" src="/img/elibrary.gif">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
-                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/conciergekart"> Code</a>
-                           <a class ="link fa fa-eye" target="_blank" href="https://www.concierge-kart.com/"> Live</a>
-                        </div>
-                        <p>This project was freelanced for a small canadian alcohol delivery company that wanted to expand their business online. To create their vision, they required a persistent shopping cart order system where drivers are notified when orders arrive and customers are notified when a driver selects their order. </p>
-                        <div class="card-footer">
-                            <div class="skill">Spring Boot</div>
-                            <div class="skill">Shopping Cart</div>
-                            <div class="skill">PostgreSQL</div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h4 class="subtitle">Task Manager</h4>
-                    <img loading="lazy" class="project-img" src="/img/taskmanager.gif">
-                    <div id="description" class="hidden-description">
-                        <div class="card-header">
-                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-taskmanager"> Code</a>
-                           <a class ="link fa fa-eye" target="_blank" href="http://delunico-taskmanager.herokuapp.com/"> Live</a>
-                        </div>
-                        <p>This task managing web application uses full CRUD operations between the front-end build in Angular and the backend using a node.js API connected to a MySQL database. It offers easy task management as well as the option to save multiple lists.</p>
-                        <div class="card-footer">
-                            <div class="skill">Angular</div>
-                            <div class="skill">Node API</div>
-                            <div class="skill">Material UI</div>
-                            <div class="skill">SQL</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h4 class="subtitle">Delunico Drive</h4>
-                    <img loading="lazy" class="project-img" style="height:unset!important;" src="/img/delunicodrive.gif">
-                    <div id="description" class="hidden-description">
-                        <div class="card-header">
-                            <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-google-drive-clone"> Code</a>
-                            <a class ="link fa fa-eye" target="_blank" href="https://delunico-google-drive-clone.herokuapp.com/"> Live</a> 
-                        </div>
-                        <p>A React.js web app that implements file storage from the google firebase API with user authentication. File directories can store uploaded files saved to your account and can later be downloaded.</p>
-                        <div class="card-footer">
-                            <div class="skill">React</div>
-                            <div class="skill">Node API</div>
-                            <div class="skill">Firebase Auth & DB</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h4 class="subtitle">eLibrary</h4>
-                    <img loading="lazy" class="project-img" src="/img/library.gif">
-                    <div id="description" class="hidden-description">
-                        <div class="card-header">
-                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-library"> Code</a>
-                           <a class ="link fa fa-eye" target="_blank" href="https://delunico-library.herokuapp.com/"> Live</a>
+                            <h4 class="subtitle">eLibrary</h4>
+                            <p class="seemore"><a style="text-decoration: none;  color:white" href="/projects/elibrary.html">See More</a></p>
+                           <a class="clearlink fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-library"> Code</a>
+                           <a class ="clearlink fa fa-eye" target="_blank" href="https://delunico-library.herokuapp.com/"> Live</a>
+                 
                         </div>
                         <p>This ebooks application was designed to display information about different kinds of ebooks in a dynamic, responsive, and intuitive interface. It implements spring boot web framework, spring security, spring mail, thymeleaf, and postgresql.</p>
                         <div class="card-footer">
@@ -151,29 +114,16 @@
                         </div>
                     </div>
                 </div>
+         
                 <div class="project-card">
-                    <h4 class="subtitle">Sorting Algorithms</h4>
-                    <img loading="lazy" class="project-img" src="/img/sortingalgorithms.gif">
+                    
+                    <img loading="lazy" class="project-img" src="/img/thefoodchain.png">
                     <div id="description" class="hidden-description">
                         <div class="card-header">
-                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/SortingAlgorithms"> Code</a>
-                        </div>
-                        <p>This Pygame app visualizes bubble sort and quick sort sorting algorithms with customized UI components.  I developed my own custom UI components such as sliders and toggle buttons as they are not so easy to integrate from other modules such as Tkinter into Pygame seamlessly.</p>
-                        <div class="card-footer">
-                            <div class="skill">Python</div>
-                            <div class="skill">Pygame</div>
-                            <div class="skill">Bubble Sort</div>
-                            <div class="skill">Quick Sort</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h4 class="subtitle">Restaurant</h4>
-                    <img loading="lazy" class="project-img" src="/img/restaurant.gif">
-                    <div id="description" class="hidden-description">
-                        <div class="card-header">
-                           <a class=" link fa fa-code" target="_blank" href="https://github.com/NickDeLu/restaurant"> Code</a>
-                           <a class ="link fa fa-eye" target="_blank" href="http://delunico.dev.fast.sheridanc.on.ca/restaurant/index.html"> Live</a>
+                            <h4 class="subtitle">The Food Chain</h4>
+                            <p class="seemore"><a style="text-decoration: none; color:white" href="/projects/thefoodchain.html">See More</a></p>
+                           <a class=" clearlink fa fa-code" target="_blank" href="https://github.com/Deliverless"> Code</a>
+                           <a class ="clearlink fa fa-eye" target="_blank" href="https://www.youtube.com/watch?v=TtMiWaCP0eE"> Live</a>
                         </div>
                         <p>This CRUD restaurant order system was designed to be an example of what can be achieved with just plain HTML, CSS, JS, and a localStorage shopping cart. It utilizes jQuery for dynamically updating data fetched from a json file with ajax.  </p>
                         <div class="card-footer">
@@ -185,7 +135,140 @@
                         </div>
                     </div>
                 </div>
-                
+
+              
+                <div class="project-card">
+                    
+                    <img loading="lazy" class="project-img" style="height:unset!important;" src="/img/delunico-drive-2.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                            <h4 class="subtitle">Delunico Drive</h4>
+                            <p class="seemore"><a style="text-decoration: none; color:white" href="/projects/delunico-drive.html">See More</a></p>
+                            <a class=" clearlink fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-google-drive-clone"> Code</a>
+                            <a class ="clearlink fa fa-eye" target="_blank" href="https://delunico-google-drive-clone.herokuapp.com/"> Live</a> 
+                        </div>
+                        <p>A React.js web app that implements file storage from the google firebase API with user authentication. File directories can store uploaded files saved to your account and can later be downloaded.</p>
+                        <div class="card-footer">
+                            <div class="skill">React</div>
+                            <div class="skill">Node API</div>
+                            <div class="skill">Firebase Auth & DB</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    
+                    <img loading="lazy" class="project-img" src="/img/ecommerce-api-2.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                            <h4 class="subtitle">Ecommerce API</h4>
+                            <p class="seemore"><a style="text-decoration: none; color:white" href="/projects/ecommerce-backend-api.html">See More</a></p>
+                           <a class=" clearlink fa fa-code" target="_blank" href="https://github.com/NickDeLu/backend-template/tree/ecommerce-template"> Code</a>
+                           <a class ="clearlink fa fa-eye" target="_blank" href="http://ec2-18-212-210-81.compute-1.amazonaws.com/api/swagger#/"> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+            
+                    <img loading="lazy" class="project-img" src="/img/sortingalgorithms.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                            <h4 class="subtitle">Sorting Algorithms</h4>
+                            <p class="seemore"><a style="text-decoration: none; color:white" href="/projects/sorting-algorithms.html">See More</a></p>
+                           <a class=" clearlink fa fa-code" target="_blank" href="https://github.com/NickDeLu/SortingAlgorithms"> Code</a>
+                        </div>
+                        <p>This Pygame app visualizes bubble sort and quick sort sorting algorithms with customized UI components.  I developed my own custom UI components such as sliders and toggle buttons as they are not so easy to integrate from other modules such as Tkinter into Pygame seamlessly.</p>
+                        <div class="card-footer">
+                            <div class="skill">Python</div>
+                            <div class="skill">Pygame</div>
+                            <div class="skill">Bubble Sort</div>
+                            <div class="skill">Quick Sort</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    
+                    <img loading="lazy" class="project-img" src="/img/ollieai.PNG">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                            <h4 class="subtitle">Ollie Ai</h4>
+                            <p class="seemore"><a style="text-decoration: none; color:white" href="/projects/ollieai.html">See More</a></p>
+                           <a class=" clearlink fa fa-code" target="_blank" href="https://github.com/NickDeLu/ollie"> Code</a>
+                           <a class ="clearlink fa fa-eye" target="_blank" href="https://ollieai.netlify.app"> Live</a>
+                        </div>
+                        <p>This CRUD restaurant order system was designed to be an example of what can be achieved with just plain HTML, CSS, JS, and a localStorage shopping cart. It utilizes jQuery for dynamically updating data fetched from a json file with ajax.  </p>
+                        <div class="card-footer">
+                            <div class="skill">jQuery</div>
+                            <div class="skill">Ajax</div>
+                            <div class="skill">CSS6</div>
+                            <div class="skill">HTML5</div>
+                            <div class="skill">ES6</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    
+                    <img loading="lazy" class="project-img" src="/img/covid-tracker-smaller.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                            <h4 class="subtitle">COVID 19 Tracker</h4>
+                            <p class="seemore"><a style="text-decoration: none; color:white" href="/projects/covid-tracker.html">See More</a></p>
+                           <a class=" clearlink fa fa-code" target="_blank" href="https://github.com/NickDeLu/covid-tracker"> Code</a>
+                        </div>
+                        <p>This CRUD restaurant order system was designed to be an example of what can be achieved with just plain HTML, CSS, JS, and a localStorage shopping cart. It utilizes jQuery for dynamically updating data fetched from a json file with ajax.  </p>
+                        <div class="card-footer">
+                            <div class="skill">jQuery</div>
+                            <div class="skill">Ajax</div>
+                            <div class="skill">CSS6</div>
+                            <div class="skill">HTML5</div>
+                            <div class="skill">ES6</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    
+                    <img loading="lazy" class="project-img" src="/img/quixercise.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                            <h4 class="subtitle">Quixercise</h4>
+                            <p class="seemore"><a style="text-decoration: none; color:white" href="/projects/quixercise.html">See More</a></p>
+                           <a class=" clearlink fa fa-code" target="_blank" href="https://github.com/orgs/Quixercise/repositories"> Code</a>
+                        </div>
+                        <p>This CRUD restaurant order system was designed to be an example of what can be achieved with just plain HTML, CSS, JS, and a localStorage shopping cart. It utilizes jQuery for dynamically updating data fetched from a json file with ajax.  </p>
+                        <div class="card-footer">
+                            <div class="skill">jQuery</div>
+                            <div class="skill">Ajax</div>
+                            <div class="skill">CSS6</div>
+                            <div class="skill">HTML5</div>
+                            <div class="skill">ES6</div>
+                        </div>
+                    </div>
+                </div>
+
+           
+                <div class="project-card">
+                   
+                    <img loading="lazy" class="project-img" src="/img/task-manager.gif">
+                    <div id="description" class="hidden-description">
+                        <div class="card-header">
+                            <h4 class="subtitle">Task Manager</h4>
+                            <p class="seemore"><a style="text-decoration: none; color:white" href="/projects/task-manager.html">See More</a></p>
+                           <a class=" clearlink fa fa-code" target="_blank" href="https://github.com/NickDeLu/delunico-taskmanager"> Code</a>
+                           <a class ="clearlink fa fa-eye" target="_blank" href="http://delunico-taskmanager.herokuapp.com/"> Live</a>
+                        </div>
+                        <p>This task managing web application uses full CRUD operations between the front-end build in Angular and the backend using a node.js API connected to a MySQL database. It offers easy task management as well as the option to save multiple lists.</p>
+                        <div class="card-footer">
+                            <div class="skill">Angular</div>
+                            <div class="skill">Node API</div>
+                            <div class="skill">Material UI</div>
+                            <div class="skill">SQL</div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
             
     
@@ -193,7 +276,7 @@
 
         <section class="experience" id="experience">
             <h3 class="title">Experience</h3>
-            <div class="workexperience">
+            <!-- <div class="workexperience">
                 <div class="div">&lt;co-ops&gt;</div>
                     <div class="indent">
                         <div class="div">&lt;blackberry&gt;</div>
@@ -226,8 +309,16 @@
                     </div>
                    
                 <div class="div">&lt;/co-ops&gt;</div>
+            </div> -->
+            <div style="text-align:center;">
+            <!-- <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%2815%2C25%2C34%2C1%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=18px&lh=145%25&si=false&es=4x&wm=false&code=%253Cco-ops%253E%250A%2520%2520%253Cblackberry%253E%250A%2520%2520%2520%2520%253Ctitle%253E%2520Reporting%2520Automation%2520Developer%2520%253C%252Ftitle%253E%250A%2520%2520%2520%2520%253Cdate%253E%2520Sep%25202021%2520-%2520Dec%25202021%2520%253C%252Fdate%253E%250A%2520%2520%2520%2520%253Csummary%253E%250A%2520%2520%2520%2520%2520%2520Develop%2520and%2520architect%2520full-stack%2520internal%2520web%2520tools%2520used%2520to%2520automate%250A%2520%2520%2520%2520%2520%2520change%2520and%2520process%2520management%2520workflows.%250A%2520%2520%2520%2520%253C%252Fsummary%253E%250A%2520%2520%253C%252Fblackberry%253E%250A%250A%2520%2520%253Cworldmoneypay%253E%250A%2520%2520%2520%2520%253Ctitle%253E%2520Angular%2520and%2520Node.js%2520Developer%2520%253C%252Ftitle%253E%250A%2520%2520%2520%2520%253Cdate%253E%2520Feb%25202021%2520-%2520May%25202021%2520%253C%252Fdate%253E%250A%2520%2520%2520%2520%253Csummary%253E%250A%2520%2520%2520%2520%2520%2520Implemented%2520a%2520new%2520user%2520interface%2520based%2520on%2520AdobeXD%2520designs%2520and%2520lead%2520a%2520%2509%2509%2520%2520small%2520team%2520of%2520students%2520for%2520front-end%2520development.%250A%2520%2520%2520%2520%253C%252Fsummary%253E%250A%2520%2520%253C%252Fworldmoneypay%253E%250A%253C%252Fco-ops%253E%250A"
+            style="width: 1024px; height: 691px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe> -->
+            <img src="/img/experience.png" style="width:100%; max-width: 1300px;">
             </div>
-            
+
             
         </section>
 
@@ -245,7 +336,15 @@
                    
                 <div class="div">&lt;/dev&gt;</div>
             </div>
-            
+            <div style="text-align:center;">
+                <!-- <iframe
+                src="https://carbon.now.sh/embed?bg=rgba%2815%2C25%2C34%2C1%29&t=seti&wt=none&l=htmlmixed&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=18px&lh=145%25&si=false&es=2x&wm=false&code=%253Cdev%253E%250A%2520%2520%253Cname%253E%2520Nick%2520De%2520Luca%2520%253C%252Fname%253E%250A%250A%2520%2520%253Cedu%253E%2520Sheridan%2520College%2520%253C%252Fedu%253E%250A%250A%2520%2520%253Cintro%253E%250A%2520%2520%2520%2520Hi%21%2520My%2520name%2520is%2520Nick.%2520I%27m%2520a%2520full%2520stack%2520developer%2520and%2520I%2520am%2520the%2520type%2520of%250A%2520%2520%2520%2520programmer%2520that%2520is%2520addicted%2520to%2520those%2520%2522ahaaa%2522%2520moments%2520when%2520you%2520click%2520run%2520and%250A%2520%2520%2520%2520it%2520works%21%250A%2520%2520%253C%252Fintro%253E%250A%253C%252Fdev%253E%250A"
+                style="width: 100%; height: 882px; border:0; transform: scale(1); overflow:hidden;"
+                sandbox="allow-scripts allow-same-origin">
+                </iframe> -->
+
+            </div>
+          
             
         </section>
         
