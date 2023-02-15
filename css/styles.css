@@ -35,6 +35,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 button {
   outline: 0;
@@ -124,7 +125,7 @@ footer {
 }
 .socialbar {
   width: 50px;
-  height: 140px;
+  height: 200px;
   font-size: 40px;
   position: absolute;
   top: 60%;
@@ -133,11 +134,13 @@ footer {
   cursor: pointer;
 }
 
-.socialbar i.inside::before{
+.socialbar i.inside::before, .socialbar svg{
 
    filter: drop-shadow(-3px 3px 1px rgba(0,0,0,.5));
 }
-
+.fa{
+  transition: all 0.3s;
+}
 .card-header {
   text-align: center;
 }
@@ -145,6 +148,22 @@ footer {
   font-size: 70px;
   color: #000;
   transform: scale(1.1);
+}
+.devpost svg{
+  width:61px;
+  fill:#003e54;
+}
+.devpost svg:hover{
+  fill:#d2f0f6;
+}
+.devpost .fa-stack-1x{
+  z-index: -1;
+  font-size: 44px!important;
+  top: 7px;
+  margin-left: 5px;
+}
+.devpost:hover .fa-stack-1x {
+  color: #003e54;
 }
 .linkedin .inside {
   font-size: 70px;
@@ -154,12 +173,15 @@ footer {
 .linkedin .fa-stack-1x {
   bottom: 0;
 }
+.github .fa-stack-1x {
+  bottom: 36%;
+}
 .socialbar a .outside {
   font-size: 70px;
   color: #fff;
 }
 .socialbar a:hover .inside {
-  color: #fff;
+  color: #d2f0f6;
 }
 .linkedin:hover .outside {
   color: #1b3764;
@@ -226,10 +248,10 @@ box-shadow: -3px 3px 15px #282e3a;
 .cta:hover,
 .form input[type="submit"]:hover,
 .link:hover {
-  background-color: #fff;
-  color: #00c9b7;
+  background-color: #d2f0f6;
+  color: #53b2d7;
   text-shadow: none;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: -3px 3px 15px #282e3a;
 }
 .landing {
@@ -422,10 +444,9 @@ canvas {
 }
 .cta,
 .form input[type="submit"] {
-  text-shadow: -1px 1px 5px #000;
-  background-color: #3fc5dd;
+  background-color: #53b2d7;
   color: #fff;
-  border-radius: 25px;
+  border-radius: 35px;
   padding: 20px;
   width: fit-content;
   margin: 50px auto;
@@ -488,7 +509,7 @@ canvas {
 }
 .div, .about{
   font-size: 30px;
-  color: #569cd6;
+  color: #53b2d7;
   font-family: "Courier New", Courier, monospace;
 }
 .indent {
