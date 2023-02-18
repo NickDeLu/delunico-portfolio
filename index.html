@@ -30,6 +30,21 @@ window.addEventListener('load', function() {
   window.scrollTo(0, sessionStorage.getItem('scrollTop') || 0);
 });
 </script>
+<style>
+
+    .tag-container{
+        display: flex; justify-content: center; align-items: center; max-width: 900px; 
+                        margin: auto; margin-block: -70px;
+    }
+    @media screen and (max-width: 680px) {
+        .tag-container{
+            margin-block: unset;
+        }
+        .tag-container img{
+            display: none;
+        }
+    }
+</style>
 
 <body>
     <div id="container" class="container">
@@ -77,8 +92,16 @@ window.addEventListener('load', function() {
                 <img class="landing-bg" src="/img/background.webp?v=2">
                 <div class="center-container" >
                     <div id="title">
+                          
                         <h1 class="title">Nicolas <span style="white-space: nowrap;font-family: Open Sans, sans-">De Luca</span></h1>
+                        <div class="tag-container">
+                            <img src="img/opentag.svg" style="max-width: 100%; height: auto;">
+                            <hr style="width:100%; max-width: 600px;     border: 1px solid white;">
+                            <img src="img/closetag.svg" style="max-width: 100%; height: auto;">
+                          </div>
+                          
                         <h2 class="subtitle" style="box-shadow:unset;">Full Stack Developer</h2>
+                        
                     </div>
                     <div class="scroll cta" id="cta">Lets Connect</div>
                 </div>
