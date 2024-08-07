@@ -75,6 +75,31 @@
           padding-bottom: 75%;
         }
       }
+      ol {
+            counter-reset: item;
+            list-style-type: none;
+        }
+        ol li {
+            margin: 10px 0;
+            padding-left: 35px;
+            position: relative;
+            text-align: left;
+        }
+        ol li::before {
+            content: counter(item);
+            counter-increment: item;
+            background: rgb(37, 150, 190);
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
   </style>
 <body>
     <div id="container" class="container">
@@ -124,8 +149,19 @@
                         <a href="http://ec2-3-80-94-70.compute-1.amazonaws.com/" target="_new"><img src="https://img.shields.io/badge/Combodocs-00B8D9.svg?style=for-the-badge&amp;logo=Combodocs&amp;logoColor=white" alt="Combodocs"></a>
                     </div>
                     <br>
-                    <div class="subtitle"  style = "text-align: left; padding-left: 50px;">Fully Documented and Authenticated REST API</div><br>
-                    <img id="diagram" src="/img/ecomapi-deployment-darkmode-new.drawio.png" style="width:100%; max-width: 1300px;">
+                    <div class="subtitle"  style=" width:calc(100% - 50px); text-align: left; padding-left: 50px;">Fully Documented and Authenticated REST API</div><br>
+                    
+                    <ol id="diagram" class="mini-text" style="padding-left: 45px; width: calc(100% - 116px); max-width: 1000px;">
+                        <img src="/img/ecomapi-deployment-darkmode-new.drawio.png" style="width:100%; max-width: 900px;">
+                        <li><strong>Coolify</strong>: Manages the deployment of Docker containers on the Hetzner server, ensuring that the latest versions of the applications are running.</li>
+                        <li><strong>Hetzner Server</strong>: Hosts the entire infrastructure, including Docker Compose, Traefik load balancer, and MySQL database.</li>
+                        <li><strong>Traefik Proxy Load Balancer</strong>: Distributes incoming traffic across multiple instances of the eCommerce API containers, ensuring high availability and reliability.</li>
+                        <li><strong>Docker Compose</strong>: Orchestrates the deployment of multiple containers, including the eCommerce API and MySQL database. Utilizes Docker volumes for persistent storage and performs regular health checks to ensure container stability.</li>
+                        <li><strong>GitHub Actions CICD Pipeline</strong>: Automates the build and deployment process. Upon pushing code to the repository, the pipeline builds the Docker images, pushes them to the GitHub Container Registry, and triggers Coolify to redeploy the updated containers.</li>
+                        <li><strong>GitHub Container Registry</strong>: Stores the Docker images of the application, allowing for version control and easy deployment of the latest builds.</li>
+                        <li><strong>Cloudflare</strong>: Provides a Content Delivery Network (CDN) for faster content delivery, DDoS protection, DNS resolution, and SSL certificates for secure communication.</li>
+                        <li><strong>Cloudflare Pages</strong>: Hosts the frontend of the eCommerce application, ensuring that users can access the web pages quickly and securely.</li>
+                    </ol>
                 </div>
             
                 <div class="grid-item right" style = "text-align: left;">
@@ -166,13 +202,23 @@
                         
                         This setup enhances deployment efficiency, improves application reliability, and supports scalable growth, making it a comprehensive solution for modern eCommerce needs.
 
-                    </div>      
-                    <img id="diagram-mobile" src="/img/ecomapi-deployment-darkmode-new.drawio.png" style="width:100%; max-width: 1300px; display:none;">
+                    </div><br>   
+                    <ol id="diagram-mobile" class="mini-text" style="margin-left: -25px; width: 100%; max-width: 1000px;  display:none;">
+                        <img src="/img/ecomapi-deployment-darkmode-new.drawio.png" style="width:100%; max-width: 900px;">
+                        <li><strong>Coolify</strong>: Manages the deployment of Docker containers on the Hetzner server, ensuring that the latest versions of the applications are running.</li>
+                        <li><strong>Hetzner Server</strong>: Hosts the entire infrastructure, including Docker Compose, Traefik load balancer, and MySQL database.</li>
+                        <li><strong>Traefik Proxy Load Balancer</strong>: Distributes incoming traffic across multiple instances of the eCommerce API containers, ensuring high availability and reliability.</li>
+                        <li><strong>Docker Compose</strong>: Orchestrates the deployment of multiple containers, including the eCommerce API and MySQL database. Utilizes Docker volumes for persistent storage and performs regular health checks to ensure container stability.</li>
+                        <li><strong>GitHub Actions CICD Pipeline</strong>: Automates the build and deployment process. Upon pushing code to the repository, the pipeline builds the Docker images, pushes them to the GitHub Container Registry, and triggers Coolify to redeploy the updated containers.</li>
+                        <li><strong>GitHub Container Registry</strong>: Stores the Docker images of the application, allowing for version control and easy deployment of the latest builds.</li>
+                        <li><strong>Cloudflare</strong>: Provides a Content Delivery Network (CDN) for faster content delivery, DDoS protection, DNS resolution, and SSL certificates for secure communication.</li>
+                        <li><strong>Cloudflare Pages</strong>: Hosts the frontend of the eCommerce application, ensuring that users can access the web pages quickly and securely.</li>
+                    </ol>   
                 </div>
             </div>
-            <div><br>
+            <div class="grid-item"><br>
                 <div class="subtitle" style = "text-align: left; padding-left: 50px;">
-                    Dockerfile <br>
+                   Dockerfile <br>
                     <img src="/img/docker.png" style="width: calc(100% - 100px); max-width: 1300px;">
                 </div>
                 

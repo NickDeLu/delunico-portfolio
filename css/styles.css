@@ -283,6 +283,9 @@ h2 {
 h3 {
   font-size: 30px;
 }
+ul, ol {
+  font-family: "Open Sans", sans-serif!important;
+}
 .title {
   font-size: 60px;
   margin: 0;
