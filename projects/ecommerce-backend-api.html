@@ -45,6 +45,12 @@
         .video-container iframe, .video-container img{
             width: calc(100% - 50px)!important;
         }
+        #diagram{
+            display:none;
+        }
+        #diagram-mobile{
+            display:block!important;
+        }
     }
     .video-container {
         position: relative;
@@ -119,6 +125,7 @@
                     </div>
                     <br>
                     <div class="subtitle"  style = "text-align: left; padding-left: 50px;">Fully Documented and Authenticated REST API</div><br>
+                    <img id="diagram" src="/img/ecomapi-deployment-darkmode-new.drawio.png" style="width:100%; max-width: 1300px;">
                 </div>
             
                 <div class="grid-item right" style = "text-align: left;">
@@ -126,12 +133,67 @@
                     <div class="mini-text">A fully documented and authenticated backend REST nodejs and express api template that can be incorporated into any ecommerce website. It includes user accounts, email verification, routes for products, categories, payment methods, as well as addresses. </div>
                     <br>
                     <div class="subtitle"  style = "text-align: left">What tools it uses</div><br>
-                    <img src="https://img.shields.io/badge/NestJS-C60000.svg?style=for-the-badge&amp;logo=NestJS&amp;logoColor=white" alt="NestJS"><img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&amp;logo=MySQL&amp;logoColor=white" alt="MySQL"><img src="https://img.shields.io/badge/Rest-008CBA.svg?style=for-the-badge&amp;logo=Rest&amp;logoColor=white" alt="Rest"><img src="https://img.shields.io/badge/TypeScript-007ACC.svg?style=for-the-badge&amp;logo=TypeScript&amp;logoColor=white" alt="TypeScript"><img src="https://img.shields.io/badge/NodeJS-339933.svg?style=for-the-badge&amp;logo=Node.js&amp;logoColor=white" alt="NodeJS"><img src="https://img.shields.io/badge/Express-191970.svg?style=for-the-badge&amp;logo=Express&amp;logoColor=white" alt="Express"><img src="https://img.shields.io/badge/OpenAPI%20Swagger-7B68EE.svg?style=for-the-badge&amp;logo=OpenAPI+Swagger&amp;logoColor=white" alt="OpenAPI Swagger"><img src="https://img.shields.io/badge/Combodocs-0077C9.svg?style=for-the-badge&amp;logo=Combodocs&amp;logoColor=white" alt="Combodocs"><img src="https://img.shields.io/badge/Terraform-5C4EE5.svg?style=for-the-badge&amp;logo=Terraform&amp;logoColor=white" alt="Terraform"><img src="https://img.shields.io/badge/AWS-F9A81C.svg?style=for-the-badge&amp;logo=Amazon+AWS&amp;logoColor=white" alt="AWS"><img src="https://img.shields.io/badge/PassportJS-FB5A5A.svg?style=for-the-badge&amp;logo=PassportJS&amp;logoColor=white" alt="PassportJS">
+                    <img src="https://img.shields.io/badge/NestJS-C60000.svg?style=for-the-badge&amp;logo=NestJS&amp;logoColor=white" alt="NestJS"><img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&amp;logo=MySQL&amp;logoColor=white" alt="MySQL"><img src="https://img.shields.io/badge/Rest-008CBA.svg?style=for-the-badge&amp;logo=Rest&amp;logoColor=white" alt="Rest"><img src="https://img.shields.io/badge/TypeScript-007ACC.svg?style=for-the-badge&amp;logo=TypeScript&amp;logoColor=white" alt="TypeScript"><img src="https://img.shields.io/badge/NodeJS-339933.svg?style=for-the-badge&amp;logo=Node.js&amp;logoColor=white" alt="NodeJS"><img src="https://img.shields.io/badge/Express-191970.svg?style=for-the-badge&amp;logo=Express&amp;logoColor=white" alt="Express"><img src="https://img.shields.io/badge/OpenAPI%20Swagger-7B68EE.svg?style=for-the-badge&amp;logo=OpenAPI+Swagger&amp;logoColor=white" alt="OpenAPI Swagger"><img src="https://img.shields.io/badge/Combodocs-0077C9.svg?style=for-the-badge&amp;logo=Combodocs&amp;logoColor=white" alt="Combodocs">
+                    <img src="https://img.shields.io/badge/Hetzner-00A3E0.svg?style=for-the-badge&amp;logo=Hetzner&amp;logoColor=white" alt="Hetzner">
+                    <img src="https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&amp;logo=Docker&amp;logoColor=white" alt="Docker">
+                    <img src="https://img.shields.io/badge/Coolify-5C4EE5.svg?style=for-the-badge&amp;logo=Coolify&amp;logoColor=white" alt="Coolify">
+                    <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&amp;logo=GitHub+Actions&amp;logoColor=white" alt="GitHub Actions">
+                    <img src="https://img.shields.io/badge/Cloudflare-F7C23D.svg?style=for-the-badge&amp;logo=Cloudflare&amp;logoColor=white" alt="Cloudflare">
+                    <img src="https://img.shields.io/badge/Traefik-00A3E0.svg?style=for-the-badge&amp;logo=Traefik&amp;logoColor=white" alt="Traefik">
+                    <img src="https://img.shields.io/badge/PassportJS-FB5A5A.svg?style=for-the-badge&amp;logo=PassportJS&amp;logoColor=white" alt="PassportJS">
                     <br>
                     <br>
                     <div class="subtitle"  style = "text-align: left">How I built it</div>
-                    <p class="mini-text">This Ecommerce API was build in Nestjs back end framework with typescript and express. It was deployed onto an AWS ec2 instance via an automated terraform script for infrastructure as code, and was configured to be accessible publicly with a proxy from apache's httpd, as well with AWS security groups to enable ingress inbound rules for http and https. There are authorized routes that only users with sufficient privileges can access, as well as unauthenticated routes for any user. This API implement's class-validator to validate requests in order to maintain type safety and provide informative error responses. A custom logging filter was also implemented to record all api requests, as well as catch and document any exceptions. These logs can be fetched with pagination on admin routes. Finally, each route is documented with OpenAPI standard (Swagger) and the entire application is also documented with combodocs for further inline comments about the apps internal structure.</p>      
+                    <div class="mini-text">
+                        <!-- This Ecommerce API was build in Nestjs back end framework with typescript and express. It was deployed onto an AWS ec2 instance via an automated terraform script for infrastructure as code, and was configured to be accessible publicly with a proxy from apache's httpd, as well with AWS security groups to enable ingress inbound rules for http and https. There are authorized routes that only users with sufficient privileges can access, as well as unauthenticated routes for any user. This API implement's class-validator to validate requests in order to maintain type safety and provide informative error responses. A custom logging filter was also implemented to record all api requests, as well as catch and document any exceptions. These logs can be fetched with pagination on admin routes. Finally, each route is documented with OpenAPI standard (Swagger) and the entire application is also documented with combodocs for further inline comments about the apps internal structure. -->
+                        This eCommerce API was developed using NestJS, TypeScript, and Express, with a focus on providing a secure and scalable backend for web applications. Key features and deployment details include:
+    
+                        <ul class="mini-text">
+                            <li><strong>Backend Framework</strong>: Built with NestJS, leveraging TypeScript and Express for robust and scalable API development.</li>
+                            <li><strong>Security</strong>: Includes both authorized routes for privileged users and unauthenticated routes accessible to all users. Implemented class-validator for request validation, ensuring type safety and informative error responses.</li>
+                            <li><strong>Logging</strong>: Features a custom logging filter to record all API requests and capture exceptions. Logs are available with pagination on admin routes for detailed monitoring and analysis.</li>
+                            <li><strong>Documentation</strong>: Each API route is documented using the OpenAPI (Swagger) standard, and the entire application is further detailed with Compodoc, providing comprehensive inline comments and structure explanations.</li>
+                            <li><strong>Deployment</strong>: 
+                                <ul>
+                                    <li>Deployed on Hetzner servers using Docker Compose and managed through Coolify for automated deployments.</li>
+                                    <li>Utilizes Cloudflare for CDN, SSL, DNS, and DDoS protection, with the frontend also hosted on Cloudflare Pages.</li>
+                                    <li><strong>CI/CD</strong>: Integrated with GitHub Actions for automated build, containerization, and deployment. The CI/CD pipeline builds the application, creates a Docker container, and pushes it to GitHub Container Registry. Coolify then deploys the latest image from the registry using a webhook.</li>
+                                    <li><strong>Load Balancing</strong>: Employs Traefik for load balancing between Docker containers, with configuration files stored on the server and mounted as Docker volumes to manage container ephemerality.</li>
+                                    <li><strong>Health Checks</strong>: Docker Compose files include scheduled health checks to ensure container reliability.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        This setup enhances deployment efficiency, improves application reliability, and supports scalable growth, making it a comprehensive solution for modern eCommerce needs.
+
+                    </div>      
+                    <img id="diagram-mobile" src="/img/ecomapi-deployment-darkmode-new.drawio.png" style="width:100%; max-width: 1300px; display:none;">
                 </div>
+            </div>
+            <div><br>
+                <div class="subtitle" style = "text-align: left; padding-left: 50px;">
+                    Dockerfile <br>
+                    <img src="/img/docker.png" style="width: calc(100% - 100px); max-width: 1300px;">
+                </div>
+                
+
+                <div class="subtitle" style = "text-align: left; padding-left: 50px;">
+                    Docker Compose <br>
+                    <img src="/img/docker compose.png" style="width: calc(100% - 100px); max-width: 1300px;">
+                </div>
+              
+
+                <div class="subtitle" style = "text-align: left; padding-left: 50px;">
+                    GitHub Actions Yaml <br>
+                    <img src="/img/actions.png" style="width: calc(100% - 100px); max-width: 1300px;">
+                </div>
+             
+
+                <div class="subtitle" style = "text-align: left; padding-left: 50px;">
+                    Traefik Config <br>
+                    <img src="/img/traefik.png" style="width: calc(100% - 100px); max-width: 1300px; ">
+                </div>
+                
             </div>
         </section>
     </div>
